@@ -7,19 +7,21 @@ export async function main(event, context, callback) {
   const data = JSON.parse(event.body);
 
   const params = {
-    TableName: "quotes",
+    TableName: "aphorisms",
     // 'Item' contains the attributes of the item to be created
     // - 'userId': user identities are federated through the
     //             Cognito Identity Pool, we will use the identity id
     //             as the user id of the authenticated user
-    // - 'quoteId': a unique uuid
-    // - 'content': parsed from request body
+    // - 'aphorismId': a unique uuid
+    // - 'quote': parsed from request body
+    // - 'author': parsed from request body
     // - 'attachment': parsed from request body
     // - 'createdAt': current Unix timestamp
     Item: {
       userId: event.requestContext.identity.cognitoIdentityId,
-      quoteId: uuid.v1(),
-      content: data.content,
+      aphorismId: uuid.v1(),
+      quote: data.quote,
+      author: data.author,
       attachment: data.attachment,
       createdAt: new Date().getTime()
     }
