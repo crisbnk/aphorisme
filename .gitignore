@@ -1,0 +1,21 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+.webpack
+
+# mocks directory
+mocks
+
+# dotenv environment variables file
+.env
+
+# OSX
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# dotenv
+variables.env
