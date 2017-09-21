@@ -14,11 +14,12 @@ export async function main(event, context, callback) {
     },
     // 'UpdateExpression' defines the attributes to be updated
     // 'ExpressionAttributeValues' defines the value in the update expression
-    UpdateExpression: "SET quote = :quote, author = :author, attachment = :attachment",
+    UpdateExpression: "SET quote = :quote, author = :author, tags = :tags, attachment = :attachment",
     ExpressionAttributeValues: {
-      ":attachment": data.attachment ? data.attachment : null,
       ":quote": data.quote ? data.quote : null,
-      ":author": data.author ? data.author : null
+      ":author": data.author ? data.author : null,
+      ":tags": data.tags ? data.tags : null,
+      ":attachment": data.attachment ? data.attachment : null
     },
     ReturnValues: "ALL_NEW"
   };

@@ -15,6 +15,7 @@ export async function main(event, context, callback) {
     // - 'aphorismId': a unique uuid
     // - 'quote': parsed from request body
     // - 'author': parsed from request body
+    // - 'tags': parsed from request body
     // - 'attachment': parsed from request body
     // - 'createdAt': current Unix timestamp
     Item: {
@@ -22,6 +23,7 @@ export async function main(event, context, callback) {
       aphorismId: uuid.v1(),
       quote: data.quote,
       author: data.author,
+      tags: data.tags,
       attachment: data.attachment,
       createdAt: new Date().getTime()
     }
