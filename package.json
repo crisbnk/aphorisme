@@ -4,7 +4,11 @@
   "description": "",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test-create": "serverless invoke local --function create --path mocks/create-event.json",
+    "test-delete": "serverless invoke local --function delete --path mocks/delete-event.json",
+    "test-get": "serverless invoke local --function get --path mocks/get-event.json",
+    "test-list": "serverless invoke local --function list --path mocks/list-event.json",
+    "test-update": "serverless invoke local --function update --path mocks/update-event.json"
   },
   "keywords": [],
   "author": "",
