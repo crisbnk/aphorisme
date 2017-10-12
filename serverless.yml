@@ -91,3 +91,14 @@ functions:
           method: delete
           cors: true
           authorizer: aws_iam
+
+  # Defines an HTTP API endpoint that calls the main function in get.js
+  # - path: url path is /
+  # - method: GET request
+  queryaphorisms:
+    handler: queryaphorisms.main
+    events:
+      - http:
+          path: /
+          method: get
+          cors: true
