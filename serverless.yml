@@ -30,7 +30,7 @@ provider:
 
 functions:
   # Defines an HTTP API endpoint that calls the main function in create.js
-  # - path: url path is /aphorisms
+  # - path: url path is /admin/aphorisms
   # - method: POST request
   # - cors: enabled CORS (Cross-Origin Resource Sharing) for browser cross
   #     domain api call
@@ -39,55 +39,55 @@ functions:
     handler: create.main
     events:
       - http:
-          path: aphorisms
+          path: admin/aphorisms
           method: post
           cors: true
           authorizer: aws_iam
 
   # Defines an HTTP API endpoint that calls the main function in get.js
-  # - path: url path is /aphorisms/{id}
+  # - path: url path is /admin/aphorisms/{id}
   # - method: GET request
   get:
     handler: get.main
     events:
       - http:
-          path: aphorisms/{id}
+          path: admin/aphorisms/{id}
           method: get
           cors: true
           authorizer: aws_iam
 
   # Defines an HTTP API endpoint that calls the main function in list.js
-  # - path: url path is /aphorisms
+  # - path: url path is /admin/aphorisms
   # - method: GET request
   list:
     handler: list.main
     events:
       - http:
-          path: aphorisms
+          path: admin/aphorisms
           method: get
           cors: true
           authorizer: aws_iam
 
   # Defines an HTTP API endpoint that calls the main function in update.js
-  # - path: url path is /aphorisms/{id}
+  # - path: url path is /admin/aphorisms/{id}
   # - method: PUT request
   update:
     handler: update.main
     events:
       - http:
-          path: aphorisms/{id}
+          path: admin/aphorisms/{id}
           method: put
           cors: true
           authorizer: aws_iam
 
   # Defines an HTTP API endpoint that calls the main function in delete.js
-  # - path: url path is /aphorisms/{id}
+  # - path: url path is /admin/aphorisms/{id}
   # - method: DELETE request
   delete:
     handler: delete.main
     events:
       - http:
-          path: aphorisms/{id}
+          path: admin/aphorisms/{id}
           method: delete
           cors: true
           authorizer: aws_iam
