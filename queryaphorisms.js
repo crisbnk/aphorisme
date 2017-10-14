@@ -10,11 +10,7 @@ export async function main(event, context, callback) {
     // 'ExpressionAttributeValues' defines the value in the condition
     // - ':userId': defines 'userId' to be Identity Pool identity id
     //   of the authenticated user
-    // KeyConditionExpression: "author = :author",
-    // ExpressionAttributeValues: {
-    //   ":author": event.requestContext.author.name
-    // },
-    "ProjectionExpression": "quote, tags"
+    "ProjectionExpression": "aphorismId, quote, tags"
   };
 
   try {
