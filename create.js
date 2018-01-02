@@ -16,6 +16,7 @@ export async function main(event, context, callback) {
     // - 'quote': parsed from request body
     // - 'author': parsed from request body
     // - 'tags': parsed from request body
+    // - 'lang': parsed from request body
     // - 'attachment': parsed from request body
     // - 'createdAt': current Unix timestamp
     Item: {
@@ -24,6 +25,7 @@ export async function main(event, context, callback) {
       quote: data.quote,
       author: data.author,
       tags: data.tags,
+      lang: data.lang,
       attachment: data.attachment,
       createdAt: new Date().getTime()
     }
